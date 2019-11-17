@@ -19,8 +19,9 @@ btn.addEventListener("click", () => {
         }
     )
      .then(res => res.json())
-    .then(data =>{
-        console.log(data)
+    .then(data => {
+        window.open("login.html")
+        return data;
     })
     .then(
         window.open('log-in.html','_self')
