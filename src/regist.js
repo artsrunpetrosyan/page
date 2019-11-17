@@ -18,14 +18,13 @@ btn.addEventListener("click", () => {
             headers: { "Content-Type": "application/json" }
         }
     )
-    .then(res => res.json())
-    .then((response) => {
-        if(response.status == 200) {
-          window.open('log-in.html'),
-          window.close("log-in.html");
-        }
-        alert('Please check the fields below');
-        })
+     .then(res => res.json())
+    .then(data =>{
+        console.log(data)
+    })
+    .then(
+        window.open('log-in.html','_self')
+    )
         .catch(function (err) {
             console.log("Error: ", err)
         });
