@@ -10,8 +10,8 @@ btn.addEventListener("click", () => {
         {
             method: "POST",
             body: JSON.stringify({
-                lastName: `${lastName.value}`,
-                userName: `${userName.value}`,
+                lastname: `${lastName.value}`,
+                username: `${userName.value}`,
                 email: `${email.value}`,
                 password: `${password.value}`,
             }),
