@@ -23,4 +23,13 @@ btn.addEventListener("click", () => {
             console.log("Error: ", err)
         });
 
-}
+})
+
+$("#password") && $("#email") && $("lastName").keypress(function(event) { 
+    if (event.keyCode === 13) { 
+        $("#btn").click(); 
+    } 
+}); 
+
+
+
