@@ -16,36 +16,11 @@ btn.addEventListener("click", () => {
     )
     .then(res =>  {
         if(res.ok) {
-            return res.json()
+            window.open('workspace.html','_self'),
+          window.close("log-in.html");
         }  })     
-        .then(data => {
-             getFetch(data.id);
-        })
         .catch(function (err) {
             console.log("Error: ", err)
         });
 
 }
-)
-const url ="https://it-blog-posts.herokuapp.com/api/meetups/?access_token=";
-getFetch =(token) => {
-    fetch (
-        `${url}${token}`
-    )
-    .then((response) => {
-        if(response.status == 200) {
-          window.open('workspace.html','_self'),
-          window.close("log-in.html");
-        }else{
-            alert('Nope! Try again.');
-        }});
-}
-
-$("#password") && $("#email") && $("lastName").keypress(function(event) { 
-    if (event.keyCode === 13) { 
-        $("#btn").click(); 
-    } 
-}); 
-
-
-
