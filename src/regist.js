@@ -7,16 +7,17 @@ const btn = document.getElementById("btn");
 
 
 btn.addEventListener("click", () => {
+    const user = {
+            "lastname": `${lastName.value}`,
+            "username": `${userName.value}`,
+            "password": `${password.value}`,
+            "email":    `${email.value}`,
+          }
    
     fetch( "https://it-blog-posts.herokuapp.com/api/people",
     {
         method: "POST",
-        body: JSON.stringify({
-                            lastname: `${lastName.value}`,
-                            username: `${userName.value}`,
-                            email: `${email.value}`,
-                            password: `${password.value}`,
-                        }),
+        body: JSON.stringify(user),
         headers: {
             "Content-Type": "application/json"
         }
@@ -25,9 +26,9 @@ btn.addEventListener("click", () => {
       
         if(response.status === 200 ) {
            
-            return response.json()
+             console.log(response);
         }           
-        console.log(response);
+       
         
     })
     
@@ -37,9 +38,7 @@ btn.addEventListener("click", () => {
     return data;
 })
     
-    .catch(function (err) {
-                    console.log("Error: ", err)
-                });
+   
 })
 
 
