@@ -21,10 +21,11 @@ btn.addEventListener("click", () => {
             "Content-Type": "application/json"
         }
     })
-    .then(res => {
-        if(res.ok) {
+    .then(response => {
+       console.log(response);
+        if(response.status === 200 ) {
            
-            return res.json()
+            return response.json()
         }           
         
     })
