@@ -22,11 +22,12 @@ btn.addEventListener("click", () => {
         }
     })
     .then(response => {
-       console.log(response);
+      
         if(response.status === 200 ) {
            
             return response.json()
         }           
+        console.log(response);
         
     })
     
