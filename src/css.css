@@ -141,20 +141,10 @@ main>div span {
 	color: black; 
 
 } 
-.info-container{
+/* .info-container{
     margin-top:13%;
-    display:flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-.info-container a {
-    margin-right:1%; 
-    text-decoration: none;
-    color: blanchedalmond;
-}
-.info-container a:hover{
-    font-size: 21px;
-}
+} */
+
 .info{
     margin-right:1.5%; 
     color:blanchedalmond;
